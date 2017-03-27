@@ -97,7 +97,7 @@ public class RetrofitClient {
             client.readTimeout = readTimeout;
             client.readTimeoutUnit = readTimeoutUnit;
 
-            return client.init().create(serviceClass);
+            return new RetrofitClient().init().create(serviceClass);
         }
 
         public Retrofit create() {
@@ -112,7 +112,7 @@ public class RetrofitClient {
             client.readTimeout = readTimeout;
             client.readTimeoutUnit = readTimeoutUnit;
 
-            return client.init();
+            return new RetrofitClient().init();
         }
     }
 
