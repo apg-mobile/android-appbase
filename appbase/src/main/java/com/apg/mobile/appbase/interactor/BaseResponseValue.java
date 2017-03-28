@@ -1,16 +1,16 @@
-package com.apg.mobile.appbase.repository;
+package com.apg.mobile.appbase.interactor;
 
 /**
- * Created by X-tivity on 3/14/2017 AD.
+ * Created by X-tivity on 3/28/2017 AD.
  */
 
-public class RepoResult<T> {
+public class BaseResponseValue<T> implements UseCase.ResponseValue {
 
     private boolean isSuccess;
     private String message;
     private T data;
 
-    public RepoResult(boolean isSuccess, String message, T data) {
+    public BaseResponseValue(boolean isSuccess, String message, T data) {
         this.isSuccess = isSuccess;
         this.message = message;
         this.data = data;
